@@ -23,7 +23,10 @@ print()
 for i in range(len(table_data)):
     table_data[i] = table_data[i][1:]
     if i == 0:
-        day = "Today"
+        if table_data[i][0][2] == "n":
+            day = "Tonight"
+        else:
+            day = "Today"
     else:
         day = table_data[i][0][:3]
 
